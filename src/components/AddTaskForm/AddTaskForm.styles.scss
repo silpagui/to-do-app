@@ -1,0 +1,43 @@
+@import "src/assets/scss/variables.scss";
+
+.form-container {
+  display: flex;
+  margin: 18px 0px 33px 0px;
+
+  .action-button {
+    margin: 0 0 0 25px;
+  }
+}
+
+.input-add {
+  font-size: 14px;
+  line-height: 17px;
+  color: $neutral-2;
+  border-color: $neutral-3;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 20px 0px 20px 12px;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+.input-add:focus {
+  box-shadow: 5px 5px 5px $neutral-3;
+}
+
+.action-button--add {
+  background: $primary;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 20px 40px;
+}
+
+@media screen and (max-width: 375px) {
+  .form-container {
+    max-height: 50px;
+  }
+
+  .action-button--add {
+    padding: 0 20px;
+  }
+}

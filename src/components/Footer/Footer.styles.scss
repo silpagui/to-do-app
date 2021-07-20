@@ -1,0 +1,41 @@
+@import "src/assets/scss/variables.scss";
+
+.app-footer {
+  text-align: end;
+}
+
+.delete-all-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.trashcan-icon {
+  width: 20px;
+  cursor: pointer;
+  vertical-align: text-bottom;
+  transition: all 0.3s ease;
+}
+
+.trashcan-icon-white {
+  width: 20px;
+  cursor: pointer;
+  vertical-align: text-bottom;
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.action-button--delete {
+  background: $secondary;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 12px 25px;
+  &:hover,
+  &:focus {
+    border: 2px solid $secondary;
+    .trashcan-icon-white {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "src/assets/scss/variables.scss";
+
+.item-task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: taskEntry 1s ease 0s forwards;
+  opacity: 0;
+  justify-content: space-between;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.item-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $neutral;
+  padding: 4px 0px 4px 32px;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.item-checkbox input {
+  position: absolute;
+  z-index: -999;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.item-checkbox input:checked + .item-title {
+  text-decoration: line-through;
+}
+
+.item-title:before,
+.item-title:after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+}
+
+.item-title:before {
+  border: solid 2px $primary;
+  border-radius: 4px;
+  left: 4px;
+  width: 23px;
+  height: 23px;
+  transform: translateY(-50%);
+}
+
+.item-title:after {
+  left: 5px;
+  width: 21px;
+  height: 21px;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  transform: translateY(-50%) scale(0);
+}
+
+.item-checkbox input:checked + .item-title:after {
+  transform: translateY(-50%) scale(1);
+  background: $accent;
+}
+
+.item-checkbox input:checked + .item-title:before {
+  border: solid 2px $accent;
+}
+
+.item-checkbox input:focus + .item-title:before {
+  box-shadow: 0 0 4px 0px rgba(145, 93, 249, 1);
+}
+
+.trash-button {
+  background: transparent;
+  border: none;
+}
+
+.trash-button:hover .trashcan-icon,
+.trash-button:focus .trashcan-icon {
+  transform: scale(1.3);
+}
+
+.trashcan-icon {
+  width: 20px;
+  cursor: pointer;
+  vertical-align: text-bottom;
+  transition: all 0.3s ease;
+}
+
+.item-checkbox {
+  box-sizing: border-box;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes taskEntry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .item-title {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .item-title:before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .item-title:after {
+    width: 16px;
+    height: 16px;
+  }
+}

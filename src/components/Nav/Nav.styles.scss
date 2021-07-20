@@ -1,0 +1,7 @@
+@import "src/assets/scss/variables.scss";
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $neutral-3;
+}

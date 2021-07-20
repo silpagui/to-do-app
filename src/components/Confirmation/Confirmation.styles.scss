@@ -1,0 +1,64 @@
+@import "src/assets/scss/variables.scss";
+
+.confirmation-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.confirmation-wrapper--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.message-container {
+  background: $base;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  max-width: 80%;
+}
+
+.close-button {
+  cursor: pointer;
+  background: $primary;
+  border: none;
+  color: $base;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  line-height: 18px;
+  border-radius: 30px;
+}
+
+.delete-confirmation-message {
+  color: $neutral;
+  font-size: 17px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buttons-confirmation-container {
+  display: flex;
+  justify-content: center;
+  button {
+    padding: 10px 20px;
+    color: $base;
+    background: $primary;
+    &:last-child {
+      margin: 0 0 0 20px;
+    }
+  }
+}
