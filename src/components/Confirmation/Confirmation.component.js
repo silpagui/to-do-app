@@ -11,7 +11,6 @@ export function Confirmation({ onClose, question, handleOnYes, isOpen }) {
       }`}
     >
       <div className="message-container">
-        {/* TODO: Apply hover */}
         <button className="close-button" onClick={handleOnClose}>
           X
         </button>
