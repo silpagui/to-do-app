@@ -40,6 +40,13 @@
   right: -5px;
   line-height: 18px;
   border-radius: 30px;
+  &:hover,
+  &:focus {
+    box-shadow: 5px 5px 5px #828282;
+    background: #fff;
+    color: black;
+    border: 2px solid #2f80ed;
+  }
 }
 
 .delete-confirmation-message {
