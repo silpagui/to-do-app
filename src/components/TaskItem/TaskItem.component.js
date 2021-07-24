@@ -20,8 +20,8 @@ export function TaskItem({
   return (
     <li className="item-task" style={delayElementsStyle}>
       <label
-        for={`task-${taskItem.id}`}
-        class="item-checkbox"
+        htmlFor={`task-${taskItem.id}`}
+        className="item-checkbox"
         title={taskItem.title}
       >
         <input
