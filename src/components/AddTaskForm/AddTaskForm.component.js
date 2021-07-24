@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { statusTask } from "../App/App.component";
 import "./AddTaskForm.styles.scss";
 
 export function AddTaskForm({ taskList, task, setTaskList, setTask }) {
+  const input = useRef();
+
   return (
     <form
       className="form-container"
@@ -16,6 +18,7 @@ export function AddTaskForm({ taskList, task, setTaskList, setTask }) {
         });
         setTaskList(newList);
         setTask("");
+        input.current.focus();
       }}
     >
       <input
@@ -28,6 +31,7 @@ export function AddTaskForm({ taskList, task, setTaskList, setTask }) {
         onChange={function (event) {
           setTask(event.target.value);
         }}
+        ref={input}
       ></input>
       <button className="action-button action-button--add">Add</button>
     </form>
