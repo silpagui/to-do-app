@@ -111,10 +111,12 @@ export function App() {
           filteredTasks={filteredTasks}
           setShowDeleteTaskConfirmation={setConfirmation}
         />
-        <Footer
-          setShowDeletionConfirmation={setConfirmation}
-          setTaskList={setTaskList}
-        />
+        {activeSection === sections.COMPLETED && filteredTasks.length !== 0 && (
+          <Footer
+            setShowDeletionConfirmation={setConfirmation}
+            setTaskList={setTaskList}
+          />
+        )}
       </div>
 
       <Confirmation
