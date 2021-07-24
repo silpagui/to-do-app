@@ -131,3 +131,7 @@ button,
 textarea {
   outline: none;
 }
+
+button {
+  margin: 0;
+}

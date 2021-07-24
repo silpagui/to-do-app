@@ -1,6 +1,7 @@
 @import "src/assets/scss/variables.scss";
 
 .tab-button {
+  position: relative;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
@@ -9,28 +10,29 @@
   background: transparent;
   cursor: pointer;
   min-width: 92px;
+  padding: 0 0 22px 0;
   &:hover,
   &:focus {
     color: $primary;
   }
-}
-
-.button-decoration {
-  display: block;
-  height: 4px;
-  width: 0%;
-  margin-top: 15px;
-  position: relative;
-  bottom: -3px;
-  border-radius: 4px 4px 0px 0px;
-  transition: width 0.3s ease;
+  &:before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0%;
+    border-radius: 4px 4px 0px 0px;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .tab-button--selected {
   color: $primary;
 }
 
-.tab-button--selected .button-decoration {
+.tab-button--selected:before {
   background: $primary;
   width: 100%;
 }

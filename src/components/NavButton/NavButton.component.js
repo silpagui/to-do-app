@@ -8,7 +8,6 @@ export function NavButton({ isActive, onClick, title }) {
       onClick={onClick}
     >
       {title}
-      <span className="button-decoration"></span>
     </button>
   );
 }
