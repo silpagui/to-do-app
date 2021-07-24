@@ -1,7 +1,7 @@
 @import "src/assets/scss/variables.scss";
 
 .confirmation-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -61,6 +61,7 @@
   margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
 }
 
 .buttons-confirmation-container {

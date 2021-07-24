@@ -80,6 +80,15 @@ export function App() {
     [taskList]
   );
 
+  useEffect(
+    function updateScroll() {
+      const body = document.getElementsByTagName("body");
+      const bodyStyle = body[0].style;
+      bodyStyle.overflow = confirmation.show ? "hidden" : "";
+    },
+    [confirmation]
+  );
+
   return (
     <div className="app-container">
       <div className="content-container">
