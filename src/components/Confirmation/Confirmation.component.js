@@ -12,7 +12,9 @@ export function Confirmation({ onClose, question, handleOnYes, isOpen }) {
     >
       <div className="message-container">
         <button className="close-button" onClick={handleOnClose}>
-          X
+          <svg width="14" height="14" viewBox="0 0 14 14">
+            <use href="/assets/vectors/cross-icon.svg#cross-icon" />
+          </svg>
         </button>
         <p className="delete-confirmation-message">{question}</p>
         <div className="buttons-confirmation-container">

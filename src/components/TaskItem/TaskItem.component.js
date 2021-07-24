@@ -1,6 +1,5 @@
 import React from "react";
 import "./TaskItem.styles.scss";
-import trashcan from "../../assets/images/trashcan.svg";
 import { statusTask } from "../App/App.component";
 
 export function TaskItem({
@@ -60,7 +59,14 @@ export function TaskItem({
           });
         }}
       >
-        <img src={trashcan} alt="trashcan-icon" className="trashcan-icon" />
+        <svg
+          width="59"
+          height="80"
+          viewBox="0 0 59 80"
+          className="trashcan-icon"
+        >
+          <use href="/assets/vectors/trashcan.svg#trashcan" />
+        </svg>
       </button>
     </li>
   );

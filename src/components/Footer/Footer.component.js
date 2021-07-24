@@ -1,7 +1,5 @@
 import React from "react";
 import "./Footer.styles.scss";
-import trashcan from "../../assets/images/trashcan.svg";
-import trashcanWhite from "../../assets/images/trashcan-white.svg";
 
 export function Footer({ setTaskList, setShowDeletionConfirmation }) {
   return (
@@ -18,14 +16,14 @@ export function Footer({ setTaskList, setShowDeletionConfirmation }) {
           });
         }}
       >
-        <div className="delete-all-icon-container">
-          <img
-            src={trashcanWhite}
-            alt="trashcan-icon"
-            className="trashcan-icon-white"
-          />
-          <img src={trashcan} alt="trashcan-icon" className="trashcan-icon" />
-        </div>
+        <svg
+          width="59"
+          height="80"
+          viewBox="0 0 59 80"
+          className="trashcan-icon"
+        >
+          <use href="/assets/vectors/trashcan.svg#trashcan" />
+        </svg>
         Delete all
       </button>
     </footer>
