@@ -39,3 +39,11 @@ body {
     border: 2px solid $primary;
   }
 }
+
+.trashcan-icon {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  vertical-align: text-bottom;
+  transition: color 0.3s ease;
+}

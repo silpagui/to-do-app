@@ -36,16 +36,22 @@
   border: none;
   color: $base;
   position: absolute;
-  top: -5px;
-  right: -5px;
-  line-height: 18px;
+  top: 0px;
+  right: 0px;
+  padding: 6px;
   border-radius: 30px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  transform: translate(50%, -50%);
   &:hover,
   &:focus {
     box-shadow: 5px 5px 5px #828282;
     background: #fff;
     color: black;
-    border: 2px solid #2f80ed;
+    border-color: #2f80ed;
+  }
+  svg {
+    display: block;
   }
 }
 
