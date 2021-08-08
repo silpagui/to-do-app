@@ -1,0 +1,13 @@
+@import "src/assets/scss/variables.scss";
+
+.copyright-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $neutral-2;
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
