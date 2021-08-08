@@ -5,7 +5,10 @@ body {
 }
 
 .app-container {
-  padding: 0 10px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+  padding: 0 10px 20px;
 }
 
 .content-container {

@@ -6,6 +6,7 @@ import { AddTaskForm } from "../AddTaskForm/AddTaskForm.component";
 import { TaskList } from "../TaskList/TaskList.component";
 import { Footer } from "../Footer/Footer.component";
 import { Confirmation } from "../Confirmation/Confirmation.component";
+import { Copyright } from "../Copyright/Copyright.component";
 
 export const statusTask = {
   ACTIVE: "active",
@@ -117,6 +118,7 @@ export function App() {
             setTaskList={setTaskList}
           />
         )}
+        <Copyright />
       </div>
 
       <Confirmation
