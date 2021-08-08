@@ -1,7 +1,6 @@
 import React from "react";
 import "./TaskItem.styles.scss";
-import { statusTask } from "../App/App.component";
-import { assetsURL } from "../../core/core.constants";
+import { assetsURL, statusTask } from "../../core/core.constants";
 
 export function TaskItem({
   taskList,

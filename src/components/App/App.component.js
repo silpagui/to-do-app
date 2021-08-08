@@ -7,43 +7,15 @@ import { TaskList } from "../TaskList/TaskList.component";
 import { Footer } from "../Footer/Footer.component";
 import { Confirmation } from "../Confirmation/Confirmation.component";
 import { Copyright } from "../Copyright/Copyright.component";
-
-export const statusTask = {
-  ACTIVE: "active",
-  DONE: "done",
-};
-
-export const sections = {
-  ALL: "All",
-  ACTIVE: "Active",
-  COMPLETED: "Completed",
-};
-
-const localStorageKeys = {
-  TASK_LIST: "taskList",
-};
-
-export const buttonsTitles = [
-  sections.ALL,
-  sections.ACTIVE,
-  sections.COMPLETED,
-];
-
-function getTaskListFromCache() {
-  try {
-    const taskList = localStorage.getItem(localStorageKeys.TASK_LIST);
-    const parsedTaskList = JSON.parse(taskList);
-    return parsedTaskList;
-  } catch (error) {
-    console.warn("getTaskListFromCache", "Something did happened");
-  }
-}
-
-const taskListCache = getTaskListFromCache();
+import { sections, statusTask } from "../../core/core.constants";
+import {
+  getTaskListFromCache,
+  setTaskListToCache,
+} from "../../core/core.utils";
 
 export function App() {
   const [activeSection, setActiveSection] = useState(sections.ALL);
-  const [taskList, setTaskList] = useState(taskListCache || []);
+  const [taskList, setTaskList] = useState(getTaskListFromCache() || []);
   const [task, setTask] = useState("");
   const [confirmation, setConfirmation] = useState({
     message: "",
@@ -65,18 +37,7 @@ export function App() {
 
   useEffect(
     function updateCache() {
-      localStorage.setItem(
-        localStorageKeys.TASK_LIST,
-        JSON.stringify(
-          taskList.map((task) => {
-            return {
-              id: task.id,
-              status: task.status,
-              title: task.title,
-            };
-          })
-        )
-      );
+      setTaskListToCache(taskList);
     },
     [taskList]
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { buttonsTitles } from "../App/App.component";
+import { buttonsTitles } from "../../core/core.constants";
 import { NavButton } from "../NavButton/NavButton.component";
 import "./Nav.styles.scss";
 

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { statusTask } from "../App/App.component";
+import { statusTask } from "../../core/core.constants";
 import "./AddTaskForm.styles.scss";
 
 export function AddTaskForm({ taskList, task, setTaskList, setTask }) {
