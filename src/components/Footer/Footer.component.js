@@ -1,4 +1,5 @@
 import React from "react";
+import { assetsURL } from "../../core/core.constants";
 import "./Footer.styles.scss";
 
 export function Footer({ setTaskList, setShowDeletionConfirmation }) {
@@ -22,7 +23,7 @@ export function Footer({ setTaskList, setShowDeletionConfirmation }) {
           viewBox="0 0 59 80"
           className="trashcan-icon"
         >
-          <use href="/assets/vectors/trashcan.svg#trashcan" />
+          <use href={`${assetsURL}vectors/trashcan.svg#trashcan`} />
         </svg>
         Delete all
       </button>

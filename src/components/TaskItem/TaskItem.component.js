@@ -1,6 +1,7 @@
 import React from "react";
 import "./TaskItem.styles.scss";
 import { statusTask } from "../App/App.component";
+import { assetsURL } from "../../core/core.constants";
 
 export function TaskItem({
   taskList,
@@ -65,7 +66,7 @@ export function TaskItem({
           viewBox="0 0 59 80"
           className="trashcan-icon"
         >
-          <use href="/assets/vectors/trashcan.svg#trashcan" />
+          <use href={`${assetsURL}vectors/trashcan.svg#trashcan`} />
         </svg>
       </button>
     </li>

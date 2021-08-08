@@ -1,4 +1,5 @@
 import React from "react";
+import { assetsURL } from "../../core/core.constants";
 import "./Confirmation.styles.scss";
 
 export function Confirmation({ onClose, question, handleOnYes, isOpen }) {
@@ -19,7 +20,7 @@ export function Confirmation({ onClose, question, handleOnYes, isOpen }) {
       >
         <button className="close-button" onClick={handleOnClose}>
           <svg width="14" height="14" viewBox="0 0 14 14">
-            <use href="/assets/vectors/cross-icon.svg#cross-icon" />
+            <use href={`${assetsURL}vectors/cross-icon.svg#cross-icon`} />
           </svg>
         </button>
         <p className="delete-confirmation-message">{question}</p>
@@ -31,10 +32,10 @@ export function Confirmation({ onClose, question, handleOnYes, isOpen }) {
             }}
             className="action-button"
           >
-            SI
+            Yes
           </button>
           <button onClick={handleOnClose} className="action-button">
-            NO
+            No
           </button>
         </div>
       </div>
